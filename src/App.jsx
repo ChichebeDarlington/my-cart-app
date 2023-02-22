@@ -5,7 +5,7 @@ import IsLoading from "./components/IsLoading"
 
 
 function App() {
-  const {isLoading, cart} = useGlobalContextHook()
+  const {isLoading, cart, handleRefresh} = useGlobalContextHook()
 
   if(isLoading){
     return <IsLoading/>
@@ -17,6 +17,7 @@ function App() {
         <div className="empty-cart">
         <h3 >Oops, empty cart</h3>
         <p className="">Please add items to your cart</p>
+        <button className="btn btn-refresh" onClick={handleRefresh}>Refresh</button>
         </div>
         ):(
         <>

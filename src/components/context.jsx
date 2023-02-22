@@ -39,14 +39,32 @@ const AppProvider = ({ children }) => {
   },[state.cart])
 
 useEffect(()=>{
-  const fetchItems = async()=>{
-    dispatch({type:"ISLOADING"})
-    const res = await fetch(url)
-    const data = await res.json()
-    dispatch({type:"DISPLAY_DATA", payload:data})
-  }
   fetchItems()
 },[])
+
+// useEffect(()=>{
+//   handleRefresh()
+// },[state.cart])
+
+const fetchItems = async()=>{
+  dispatch({type:"ISLOADING"})
+  const res = await fetch(url, {
+    method: 'GET',
+    body: JSON.stringify(),
+    headers: {
+      'Content-type' : 'application/json'
+    }
+  })
+  const data = await res.json()
+  dispatch({type:"DISPLAY_DATA", payload:data})
+}
+
+const handleRefresh = async()=>{
+  if(state.cart.length === 0){
+    fetchItems()
+  }
+  // fetchItems()
+}
 
   return (
     <AppContext.Provider
@@ -55,7 +73,8 @@ useEffect(()=>{
         clearAllCart,
         deleteItem,
         increase,
-        decrease
+        decrease,
+        handleRefresh
       }}
     >
       {children}

@@ -90,6 +90,8 @@ const reducer = (state, action)=>{
                         case "DISPLAY_DATA":
                             return {...state, cart:action.payload, isLoading:false}
                         
+                        // case "HANDLE_REFRESH":
+                        //     return {...state}
 
          default:
             return state

@@ -13,8 +13,8 @@ const {total, clearAllCart, cart} = useGlobalContextHook()
         })}
         <hr/>
         <div className='total'>
-            <p>Total</p>
-            <span>{total}</span>
+            <p className=''>Total :</p>
+            <span className='price'>N{total}</span>
         </div>
         <div >
             <button className='clr' onClick={clearAllCart}>Clear Cart</button>

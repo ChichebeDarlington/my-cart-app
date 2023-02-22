@@ -48,6 +48,8 @@ justify-content: space-between;
 .btn{
     width: 5rem;
     background-color: blue;
+    color: white;
+    border: none;
     cursor: pointer;
     margin: 1rem 0;
 }
@@ -97,4 +99,16 @@ justify-content: space-between;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.btn-refresh{
+    color: white;
+    cursor: pointer;
+    border: .5px solid lightblue;
+}
+.price{
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding: .3rem;
 }
