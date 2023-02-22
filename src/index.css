@@ -1,0 +1,100 @@
+.App{
+    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+img{
+    height: 70px;
+}
+.navbar{
+    background-color: blue;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart{
+    position: relative;
+    right: 0px;
+    top: 9px;
+}
+.sum-cart{
+    background-color: black;
+    position: absolute;
+    top: -15px;
+    color: white;
+    border-radius: 70%;
+    padding: 2px;
+}
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.items-flex{
+display: flex;
+align-items: center;
+justify-content: space-between;
+/* flex-direction: column; */
+}
+.items-flex2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.btn{
+    width: 5rem;
+    background-color: blue;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+.total{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.clr{
+    background-color: red;
+    display: block;
+    width: 50%;
+    padding: 5px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 2px solid blue;
+    font-size: 15px;
+    font-weight: 600;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dec,.inc{
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: blue;
+    color: white;
+}
+.isloading{
+    background-color: blue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty-cart{
+    background-color: blue;
+    color: white;
+    height: 535px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
